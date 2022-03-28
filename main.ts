@@ -5,6 +5,8 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(First_num)
 })
 input.onButtonPressed(Button.AB, function () {
+    basic.showString("PLEASE WAIT...")
+    music.playTone(988, music.beat(BeatFraction.Double))
     if (Second_num == First_num) {
         basic.showString("" + Second_num + First_num)
     } else {
@@ -16,6 +18,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(Second_num)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showString("RESET")
     control.reset()
 })
 basic.forever(function () {
